@@ -1,3 +1,8 @@
+This is modified from the original readme file which can be obtained at:
+http://www.frontiersin.org/Computational_Neuroscience/10.3389/fncom.2012.00010/abstract
+
+----------------
+
 Instructions for running "WormSim" software on a Linux system.
 
 Installation guide:
