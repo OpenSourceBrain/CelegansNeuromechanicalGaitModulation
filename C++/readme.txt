@@ -1,6 +1,8 @@
 This is modified from the original readme file which can be obtained at:
 http://www.frontiersin.org/Computational_Neuroscience/10.3389/fncom.2012.00010/abstract
 
+STILL IN DEVELOPMENT: This code and the instructions for running it are still being updated for OSB/GitHub. Stay tuned...
+
 ----------------
 
 Instructions for running "WormSim" software on a Linux system.
