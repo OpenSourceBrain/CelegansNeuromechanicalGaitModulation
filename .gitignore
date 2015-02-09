@@ -1,3 +1,5 @@
+/WormSim/Sundials/bin/sundials-config
+/WormSim/sundials-2.3.0/libtool
 /WormSim/sundials-2.3.0/src/cvode/libsundials_cvode.la
 /WormSim/sundials-2.3.0/src/cvodes/libsundials_cvodes.la
 /WormSim/sundials-2.3.0/src/ida/libsundials_ida.la
