@@ -1,7 +1,7 @@
 % Program to visualise the output of WormSim 
 
 %Import worm data
-data = importdata('../Model/simdata.csv');
+data = importdata('../Model/simdata.csv', ',');
 
 %Check if objects.csv exists and if so, import object data
 %NOTE: if not using objects, you must delete any objects.csv file generated

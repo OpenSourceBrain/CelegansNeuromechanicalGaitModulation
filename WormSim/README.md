@@ -45,8 +45,18 @@ Installation guide:
 
 6) "program" will generate a file called "simdata.csv", and possibly also "objects.csv" (if objects are being used).
 
-7) Open the appropriate [viewer program](https://github.com/OpenSourceBrain/CelegansNeuromechanicalGaitModulation/blob/master/WormSim/MatlabSupport/WormView.m), found in "WormSim/MatlabSupport/", in Matlab. If you don't have access to Matlab, try [Octave](https://www.gnu.org/software/octave/it), or should be possible to reproduce this viewer in another language by examining the code and translating it as appropriate.
+7) Open the appropriate [viewer program](https://github.com/OpenSourceBrain/CelegansNeuromechanicalGaitModulation/blob/master/WormSim/MatlabSupport/WormView.m), found in "WormSim/MatlabSupport/", 
+in Matlab. If you don't have access to Matlab, try [Octave](https://www.gnu.org/software/octave/it), or should be possible to reproduce this viewer 
+in another language by examining the code and translating it as appropriate.
 
 8) Run the viewer to visualize the model behaviour.
+
+9) Summary:
+
+    cd ../Model
+    make
+    ./program
+    cd ../MatlabSupport
+    matlab WormView.m
 
 
