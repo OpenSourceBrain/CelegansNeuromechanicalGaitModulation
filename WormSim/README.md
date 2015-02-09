@@ -16,7 +16,7 @@ Installation guide:
 
     cd WormSim
 
-3) Set `idaInstallDir`:
+3) Set idaInstallDir:
 
     idaInstallDir=`pwd`/Sundials
 
@@ -31,9 +31,9 @@ Installation guide:
 
 6) You should now be able to proceed to running the simulator.
 
-Usage guide:
+### Usage guide:
 
-1) The whole integrated model is in "worm.cc". Edit this to change any aspects of the model e.g. different environments (water -> intermediate -> agar, with and without objects).
+1) The whole integrated model is in [worm.cc](https://github.com/OpenSourceBrain/CelegansNeuromechanicalGaitModulation/blob/master/WormSim/Model/worm.cc). Edit this to change any aspects of the model e.g. different environments (water -> intermediate -> agar, with and without objects).
 
 2) To compile the program, make sure you're in the "Model" directory.
 
@@ -45,7 +45,7 @@ Usage guide:
 
 6) "program" will generate a file called "simdata.csv", and possibly also "objects.csv" (if objects are being used).
 
-7) Open the appropriate viewer program, found in "WormSim/MatlabSupport/", in Matlab. If you don't have access to matlab, it should be possible to reproduce this viewer in another language by examining the code and translating it as appropriate.
+7) Open the appropriate [viewer program](https://github.com/OpenSourceBrain/CelegansNeuromechanicalGaitModulation/blob/master/WormSim/MatlabSupport/WormView.m), found in "WormSim/MatlabSupport/", in Matlab. If you don't have access to Matlab, try [Octave](https://www.gnu.org/software/octave/it), or should be possible to reproduce this viewer in another language by examining the code and translating it as appropriate.
 
 8) Run the viewer to visualize the model behaviour.
 
