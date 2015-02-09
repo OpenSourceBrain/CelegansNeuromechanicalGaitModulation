@@ -1,3 +1,11 @@
+/WormSim/sundials-2.3.0/sundials-config
+/WormSim/sundials-2.3.0/Makefile
+/WormSim/sundials-2.3.0/src/cvode/Makefile
+/WormSim/sundials-2.3.0/src/cvodes/Makefile
+/WormSim/sundials-2.3.0/src/ida/Makefile
+/WormSim/sundials-2.3.0/src/kinsol/Makefile
+/WormSim/sundials-2.3.0/src/nvec_ser/Makefile
+/WormSim/sundials-2.3.0/src/sundials/Makefile
 /WormSim/Sundials/bin/sundials-config
 /WormSim/sundials-2.3.0/libtool
 /WormSim/sundials-2.3.0/src/cvode/libsundials_cvode.la
