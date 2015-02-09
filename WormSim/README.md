@@ -1,17 +1,16 @@
-This is modified from the original readme file which can be obtained at:
-http://www.frontiersin.org/Computational_Neuroscience/10.3389/fncom.2012.00010/abstract
+## WormSim c elegans simulation engine from Boyle, Berri and Cohen 2012
 
-STILL IN DEVELOPMENT: This code and the instructions for running it are still being updated for OSB/GitHub. Stay tuned...
+See Boyle, Berri and Cohen, [Gait modulation in C. elegans: an integrated neuromechanical model](http://www.frontiersin.org/Computational_Neuroscience/10.3389/fncom.2012.00010/abstract), Front. Comput. Neurosci., 2012.
 
-----------------
+This file is based on the original readme.txt in the [Supplemental data](http://journal.frontiersin.org/Article/DownloadFile/48074/octet-stream/WormSim1.ZIP/9).
 
-Instructions for running "WormSim" software on a Linux system.
+### Instructions for running "WormSim" software on a Linux system.
 
 Installation guide:
 
-1) Copy "WormSimPackage.zip" to the location of your choice. However, there must be NO SPACES ANYWHERE IN THE PATH for this directory!
-
-2) Extract "WormSimPackage.zip"
+1) Clone this project:
+    
+    git clone https://github.com/OpenSourceBrain/CelegansNeuromechanicalGaitModulation.git
 
 3) Make sure the current working directory is "WormSim".
 
@@ -33,7 +32,7 @@ Installation guide:
 
 12) You should now be able to proceed to running the simulator.
 
-Useage guide:
+Usage guide:
 
 1) The whole integrated model is in "worm.cc". Edit this to change any aspects of the model e.g. different environments (water -> intermediate -> agar, with and without objects).
 
