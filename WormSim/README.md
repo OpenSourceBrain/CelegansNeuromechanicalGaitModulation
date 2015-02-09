@@ -12,25 +12,24 @@ Installation guide:
     
     git clone https://github.com/OpenSourceBrain/CelegansNeuromechanicalGaitModulation.git
 
-3) Make sure the current working directory is "WormSim".
+2) Go to "WormSim" directory.
 
-4) Enter the command "idaInstallDir=`pwd`/Sundials".
+    cd WormSim
 
-5) Enter the command "cd sundials-2.3.0".
+3) Set `idaInstallDir`:
 
-6) Enter the command "./configure CC=g++ --prefix=$idaInstallDir --disable-mpi --disable-fcmix".
+    idaInstallDir=`pwd`/Sundials
 
-7) Look carefully at the resulting output and check for any error messages (there shouldn't be any...). Fix and repeat steps 7 and 8 if necessary.
+4) Go to sundials-2.3.0 directory, configure & make:
 
-8) Enter the command "make".
+    cd sundials-2.3.0
+    ./configure CC=g++ --prefix=$idaInstallDir --disable-mpi --disable-fcmix
+    make
+    make install
 
-9) Look carefully at the resulting output and check for any error messages (there shouldn't be any...). Fix and repeat steps 7 to 10 if necessary.
+5) Look carefully at the resulting output and check for any error messages (there shouldn't be any...). Fix and repeat step 4 if necessary.
 
-10) Enter the command "make install".
-
-11) Look carefully at the resulting output and check for any error messages (there shouldn't be any...). Fix and repeat steps 7 to 12 if necessary.
-
-12) You should now be able to proceed to running the simulator.
+6) You should now be able to proceed to running the simulator.
 
 Usage guide:
 
