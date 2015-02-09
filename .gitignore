@@ -1,1 +1,16 @@
+/WormSim/sundials-2.3.0/src/cvode/libsundials_cvode.la
+/WormSim/sundials-2.3.0/src/cvodes/libsundials_cvodes.la
+/WormSim/sundials-2.3.0/src/ida/libsundials_ida.la
+/WormSim/sundials-2.3.0/src/kinsol/libsundials_kinsol.la
+/WormSim/sundials-2.3.0/src/nvec_ser/libsundials_nvecserial.la
+/.gitignore~
+*.o
+*.lo
+/WormSim/Model/simdata.csv
+/WormSim/Model/program
 /WormSim/Model/worm.o
+/WormSim/Sundials/include/
+/WormSim/Sundials/lib/
+/WormSim/sundials-2.3.0/config.log
+/WormSim/sundials-2.3.0/config.status
+/WormSim/sundials-2.3.0/src/*/.libs
