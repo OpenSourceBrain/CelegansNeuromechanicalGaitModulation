@@ -28,3 +28,11 @@ jobs:
         ./configure CC=g++ --prefix=$idaInstallDir --disable-mpi --disable-fcmix
         make
         make install
+        
+    - name: Build and run model
+    
+        cd WormSim/Model
+        ls -alt
+        make
+        ls -alt
+        ./program
