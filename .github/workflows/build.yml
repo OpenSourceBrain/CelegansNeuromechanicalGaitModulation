@@ -33,7 +33,14 @@ jobs:
     
       run: |
         cd WormSim/Model
-        ls -alt
         make
         ls -alt
         ./program
+        
+        
+    - name: Print some output of the executed model
+    
+      run: |
+        cd WormSim/Model
+        ls -alt
+        head -n 3 simdata.csv 
