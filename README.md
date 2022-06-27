@@ -1,4 +1,6 @@
-### C elegans neuromechanical gait modulation
+## *C. elegans* neuromechanical gait modulation
+
+[![C/C++ CI](https://github.com/OpenSourceBrain/CelegansNeuromechanicalGaitModulation/actions/workflows/build.yml/badge.svg)](https://github.com/OpenSourceBrain/CelegansNeuromechanicalGaitModulation/actions/workflows/build.yml)
 
 ![](http://www.opensourcebrain.org/attachments/download/33/Selection_095.png)
 
