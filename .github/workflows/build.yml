@@ -35,7 +35,7 @@ jobs:
         cd WormSim/Model
         make
         ls -alt
-        ./program
+        time ./program
         
         
     - name: Print some output of the executed model
