@@ -1,0 +1,46 @@
+name: C/C++ CI
+
+on:
+  push:
+    branches: [ master, development, test* ]
+  pull_request:
+    branches: [ master, development, test* ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Build Sundials
+      run: |
+        cd WormSim
+
+        # Set idaInstallDir:
+
+        idaInstallDir=`pwd`/Sundials
+
+        # Go to sundials-2.3.0 directory, configure & make:
+
+        cd sundials-2.3.0
+        ./configure CC=g++ --prefix=$idaInstallDir --disable-mpi --disable-fcmix
+        make
+        make install
+        
+    - name: Build and run model
+    
+      run: |
+        cd WormSim/Model
+        make
+        ls -alt
+        time ./program
+        
+        
+    - name: Print some output of the executed model
+    
+      run: |
+        cd WormSim/Model
+        ls -alt
+        head -n 3 simdata.csv 
