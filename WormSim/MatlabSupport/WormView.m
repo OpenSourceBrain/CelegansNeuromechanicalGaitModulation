@@ -8,7 +8,7 @@ data = importdata('../Model/simdata.csv', ',');
 %during previous runs.
 usingObjects = exist('../Model/objects.csv','file');
 if usingObjects 
-    Objects = importdata('../Model/objects.csv');
+    Objects = importdata('../Model/objects.csv', ',');
     Sz = size(Objects);
     Nobj = Sz(1);
 end
