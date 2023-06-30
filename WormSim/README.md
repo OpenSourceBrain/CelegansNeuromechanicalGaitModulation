@@ -77,7 +77,7 @@ If you don't have access to Matlab, try [Octave](https://www.gnu.org/software/oc
 python WormView.py
 ```
 
-<img width="500" alt="PythonView" src="../images/PythonView.png"/>
+<img width="500" alt="PythonView" src="../images/Replay.gif"/>
 
 **Note:** to get the objects shown in the visualisations above, change the following values in [worm.cc](https://github.com/OpenSourceBrain/CelegansNeuromechanicalGaitModulation/blob/master/WormSim/Model/worm.cc), then remake the main program, and rerun:
 

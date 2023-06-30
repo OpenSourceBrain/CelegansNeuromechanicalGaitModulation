@@ -21,6 +21,7 @@ for i in [(j*3)+y_offset for j in range(49)]:
 plt.legend()"""
 
 fig, ax = plt.subplots()
+plt.get_current_fig_manager().set_window_title("2D WormSim replay")
 ax.set_aspect("equal")
 
 usingObjects = os.path.isfile("objects.csv")
