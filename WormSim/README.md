@@ -73,7 +73,6 @@ If you don't have access to Matlab, try [Octave](https://www.gnu.org/software/oc
 
 8) Try also the [new Python viewer](https://github.com/OpenSourceBrain/CelegansNeuromechanicalGaitModulation/blob/master/WormSim/Model/WormView.py):
 
-
 ```
 python WormView.py
 ```
