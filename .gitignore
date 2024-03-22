@@ -24,3 +24,7 @@
 /WormSim/sundials-2.3.0/config.log
 /WormSim/sundials-2.3.0/config.status
 /WormSim/sundials-2.3.0/src/*/.libs
+/WormSim/Model/objects.csv
+.DS_Store
+.ipynb_checkpoints
+__pycache__
