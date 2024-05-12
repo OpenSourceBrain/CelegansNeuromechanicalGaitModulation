@@ -1,5 +1,4 @@
 from matplotlib import pyplot as plt
-from numpy import genfromtxt
 import numpy as np
 import json
 import math
@@ -61,11 +60,9 @@ def main():
     parser = argparse.ArgumentParser(description="Process some arguments.")
     parser.add_argument('-f', '--wcon_file', type=validate_file, help='WCON file path')
     parser.add_argument('-c', '--use_computed_perimeter', action='store_true', help='Use a perimeter that is computed from the midline of the worm')
-    parser.add_argument('-r', '--minor_radius', type=float, default=40e-6, help='Minor radius of the worm in meters (default: 40e-6)', required=False)
+    parser.add_argument('-r', '--minor_radius', type=float, default=40e-3, help='Minor radius of the worm in millimeters (default: 40e-3)', required=False)
 
-    # Parse arguments
     args = parser.parse_args()
-
 
     fig, ax = plt.subplots()
     plt.get_current_fig_manager().set_window_title("2D WormSim replay")
