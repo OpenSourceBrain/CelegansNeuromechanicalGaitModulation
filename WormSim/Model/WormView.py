@@ -78,9 +78,13 @@ def main():
 
         for center_x, center_y, radius in zip(center_x_arr, center_y_arr, radius_arr):
             circle = plt.Circle((center_x, center_y), radius, color="b")
-            plt.gca().add_patch(circle)
+            ax.add_patch(circle)
     else:
         print("No objects found")
+
+        # Set the limits of the plot since we don't have any objects to help with autoscaling
+        ax.set_xlim([-1.5, 1.5])
+        ax.set_ylim([-1.5, 1.5])
 
     t = np.array(wcon["data"][0]["t"])
     x = np.array(wcon["data"][0]["x"]).T
@@ -94,8 +98,13 @@ def main():
         px, py = get_perimeter(x, y, minor_radius)
     else:
         print("Using px, py from WCON file")
-        px = np.array(wcon["data"][0]["px"]).T
-        py = np.array(wcon["data"][0]["py"]).T
+
+        try:
+            px = np.array(wcon["data"][0]["px"]).T
+            py = np.array(wcon["data"][0]["py"]).T
+        except KeyError:
+            print("Error: px, py not found in WCON file. Run with --use_computed_perimeter to compute the perimeter from the midline.")
+            return 1
 
     def update(ti):
         global midline_plot, perimeter_plot
@@ -113,8 +122,6 @@ def main():
             (perimeter_plot,) = ax.plot(px[:, ti], py[:, ti], color="grey", linewidth=1)
         else:
             perimeter_plot.set_data(px[:, ti], py[:, ti])
-
-    ax.plot()  # Causes an autoscale update.
 
     ani = Player(fig, update, maxi=num_steps - 1)
 
