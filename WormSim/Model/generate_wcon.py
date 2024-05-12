@@ -4,7 +4,7 @@ import os
 import math
 import json
 
-def generate_wcon(time_arr, x_arr, y_arr, d_arr, original_file_name, wcon_file_name):
+def generate_wcon(time_arr, x_arr, y_arr, d_arr, original_file_name, center_x_arr, center_y_arr, radius_arr, wcon_file_name):
     assert(x_arr.shape == y_arr.shape)
     assert(time_arr.size == x_arr.shape[1])
 
@@ -40,6 +40,10 @@ def generate_wcon(time_arr, x_arr, y_arr, d_arr, original_file_name, wcon_file_n
     py_arr_list = py.T.tolist()
     ptail = Nbar
 
+    center_x_arr_list = center_x_arr.tolist()
+    center_y_arr_list = center_y_arr.tolist()
+    radius_arr_list = radius_arr.tolist()
+
     wcon_dict = {
         "metadata": {
             "who": "CelegansNeuromechanicalGaitModulation",
@@ -53,6 +57,15 @@ def generate_wcon(time_arr, x_arr, y_arr, d_arr, original_file_name, wcon_file_n
         },
         "comment": "Saved from CelegansNeuromechanicalGaitModulation data.",
         "note": info,
+        "@CelegansNeuromechanicalGaitModulation": {
+            "objects": {
+                "circles": {
+                    "x": center_x_arr_list,
+                    "y": center_y_arr_list,
+                    "r": radius_arr_list
+                }
+            }
+        },
         "data": [
             {
                 "id": "wormTest",
@@ -113,5 +126,11 @@ if __name__ == "__main__":
 
     wcon_file_name = "simdata.wcon"
 
-    generate_wcon(ts, x_slice, y_slice, d_slice, pos_file_name, wcon_file_name)
+    obj_file_name = "objects.csv"
+    objects = np.genfromtxt(obj_file_name, delimiter=",")
+    obj_center_x = objects[:, 0]
+    obj_center_y = objects[:, 1]
+    obj_radius = objects[:, 2]
+
+    generate_wcon(ts, x_slice, y_slice, d_slice, pos_file_name, obj_center_x, obj_center_y, obj_radius, wcon_file_name)
     validate(wcon_file_name) 
