@@ -5,7 +5,7 @@ import numpy as np
 import math
 import os
 
-data = genfromtxt("simdata.csv", delimiter=",").T
+data = genfromtxt("simdata_test.csv", delimiter=",").T
 
 print("Loaded data: %s" % (str(data.shape)))
 
