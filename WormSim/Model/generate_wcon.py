@@ -116,7 +116,9 @@ def validate(wcon_file):
 
 if __name__ == "__main__":
 
-    pos_file_name = "simdata.csv"
+    import sys
+    pos_file_name = "simdata.csv" if len(sys.argv)<2 else sys.argv[1]
+
     data = np.genfromtxt(pos_file_name, delimiter=",").T
     ts = data[0]
 
@@ -128,7 +130,7 @@ if __name__ == "__main__":
     y_slice = data[y_offset::3][:]*MICROMETERS_PER_MILLIMETER
     d_slice = data[d_offset::3][:]
 
-    wcon_file_name = "simdata.wcon"
+    wcon_file_name = pos_file_name.replace('.csv','.wcon')
 
     obj_file_name = "objects.csv"
     objects = np.genfromtxt(obj_file_name, delimiter=",")
