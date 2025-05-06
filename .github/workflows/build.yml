@@ -39,12 +39,16 @@ jobs:
         make
         make install
         
+    - name: Install Python dependencies
+      run: |
+
+        pip install numpy matplotlib  
+
     - name: Build and run model
       run: |
         cd WormSim/Model
-        make
-        ls -alt
-        time ./program
+        ./test_all.sh
+        
         
         
     - name: Print some output of the executed model
@@ -52,10 +56,3 @@ jobs:
         cd WormSim/Model
         ls -alt
         head -n 3 simdata.csv 
-
-    - name: Test creating the model GUI
-      run: |
-        cd WormSim/Model
-
-        pip install numpy matplotlib  
-        python WormView.py -nogui 
