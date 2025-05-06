@@ -7,7 +7,7 @@ if [[ ($# -eq 1) && ($1 == '-q') ]]; then
     quick_test=1
 fi
 
-rm simdata.* 
+rm -f simdata.* 
 make clean
 make 
         
