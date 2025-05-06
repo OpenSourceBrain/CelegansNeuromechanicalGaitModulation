@@ -42,7 +42,7 @@ jobs:
     - name: Install Python dependencies
       run: |
 
-        pip install numpy matplotlib  
+        pip install numpy matplotlib json jsonschema
 
     - name: Build and run model
       run: |
