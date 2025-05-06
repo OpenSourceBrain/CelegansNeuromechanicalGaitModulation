@@ -61,6 +61,7 @@ def main():
     # Default behavior is to use (px, py) if it exists, and if it doesn’t then automatically generate the perimeter from the midline. 
     parser = argparse.ArgumentParser(description="Process some arguments.")
     parser.add_argument('-f', '--wcon_file', type=validate_file, help='WCON file path')
+    parser.add_argument('-nogui', action='store_true', help="Just load file, don't show GUI")
     parser.add_argument('-s', '--suppress_automatic_generation', action='store_true', help='Suppress the automatic generation of a perimeter which would be computed from the midline of the worm. If (px, py) is not specified in the WCON, a perimeter will not be shown.')
     parser.add_argument('-i', '--ignore_wcon_perimeter', action='store_true', help='Ignore (px, py) values in the WCON. Instead, a perimeter is automatically generated based on the midline of the worm.')
     parser.add_argument('-r', '--minor_radius', type=float, default=40e-3, help='Minor radius of the worm in millimeters (default: 40e-3)', required=False)
@@ -68,7 +69,7 @@ def main():
     args = parser.parse_args()
 
     fig, ax = plt.subplots()
-    plt.get_current_fig_manager().set_window_title("2D WormSim replay")
+    plt.get_current_fig_manager().set_window_title("WCON replay")
     ax.set_aspect("equal")
 
     with open(args.wcon_file, 'r') as f:
@@ -135,7 +136,8 @@ def main():
     # TODO WormViewCSV and WormViewWCON - should WormViewCSV just be the original WormView? That's what it initially did. 
     # TODO Could take out Player and WormViewWCON into separate repo - Taking out Player could be ugly. It is quite coupled with WormView due to the update function. 
 
-    plt.show()
+    if not args.nogui:
+        plt.show()
 
 if __name__ == "__main__":
     sys.exit(main())
