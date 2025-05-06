@@ -40,7 +40,6 @@ jobs:
         make install
         
     - name: Build and run model
-    
       run: |
         cd WormSim/Model
         make
@@ -49,8 +48,14 @@ jobs:
         
         
     - name: Print some output of the executed model
-    
       run: |
         cd WormSim/Model
         ls -alt
         head -n 3 simdata.csv 
+
+    - name: Test running the model GUI
+      run: |
+        cd WormSim/Model
+
+        pip install numpy matplotlib  
+        python WormView.py
