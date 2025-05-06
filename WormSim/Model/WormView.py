@@ -4,6 +4,7 @@ from numpy import genfromtxt
 import numpy as np
 import math
 import os
+import sys 
 
 data = genfromtxt("simdata.csv", delimiter=",").T
 
@@ -119,4 +120,5 @@ ax.plot()  # Causes an autoscale update.
 
 ani = Player(fig, update, maxi=timesteps - 1)
 
-plt.show()
+if '-nogui' not in sys.argv:
+    plt.show()

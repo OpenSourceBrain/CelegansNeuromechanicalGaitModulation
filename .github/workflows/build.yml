@@ -53,9 +53,9 @@ jobs:
         ls -alt
         head -n 3 simdata.csv 
 
-    - name: Test running the model GUI
+    - name: Test creating the model GUI
       run: |
         cd WormSim/Model
 
         pip install numpy matplotlib  
-        python WormView.py
+        python WormView.py -nogui 
