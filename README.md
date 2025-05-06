@@ -10,3 +10,4 @@ A model of <i>C. elegans</i> locomotion described in Boyle, Berri and Cohen, [Ga
 For information on installing and running this code, see [here](https://github.com/OpenSourceBrain/CelegansNeuromechanicalGaitModulation/tree/master/WormSim).
 
 
+
