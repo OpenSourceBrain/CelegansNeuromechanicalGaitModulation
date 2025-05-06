@@ -20,6 +20,7 @@ def main():
 
     parser = argparse.ArgumentParser(description="Process some arguments.")
     parser.add_argument('-f', '--wcon_file', type=validate_file, help='WCON file path')
+    parser.add_argument('-nogui', action='store_true', help="Just load file and generate png, don't show GUI")
 
     args = parser.parse_args()
 
@@ -96,7 +97,13 @@ def main():
     print(np.min(d_arr))
     print(d_arr)
 
-    plt.show()
+    filename = args.wcon_file.replace(".wcon", ".png")
+    plt.savefig(filename, bbox_inches="tight", dpi=300)
+    print("Saved plot image to: %s" % filename)
+    
+
+    if not args.nogui:
+        plt.show()
 
 
 if __name__ == "__main__":

@@ -133,7 +133,14 @@ if __name__ == "__main__":
     wcon_file_name = pos_file_name.replace('.csv','.wcon')
 
     obj_file_name = "objects.csv"
-    objects = np.genfromtxt(obj_file_name, delimiter=",")
+    from os.path import isfile
+    if isfile(obj_file_name):
+        print("Loading objects from %s"%obj_file_name)
+        objects = np.genfromtxt(obj_file_name, delimiter=",")
+    else:
+        print("No objects found in %s"%obj_file_name)
+        objects = np.zeros((0,3))
+        # objects = np.array([[0,0,0]])
     obj_center_x = objects[:, 0]*MICROMETERS_PER_MILLIMETER
     obj_center_y = objects[:, 1]*MICROMETERS_PER_MILLIMETER
     obj_radius = objects[:, 2]*MICROMETERS_PER_MILLIMETER
