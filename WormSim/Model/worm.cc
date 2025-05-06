@@ -32,8 +32,8 @@ using namespace std;
 // Simulation paramaters				
 #define DURATION  10				//duration of simulation (in seconds)
 #define MEDIUM 1.0				//change in the range 0.0 (water) to 1.0 (agar)
-#define OBJECTS 10				//set number of objects (>= 0)
-#define LAYOUT 2				//change between 0 (square) 1 (hex) 2 (random)
+#define OBJECTS 0				//set number of objects (>= 0)
+#define LAYOUT 0				//change between 0 (square) 1 (hex) 2 (random)
 
 // Simulator constants
 #define NSEG 48
